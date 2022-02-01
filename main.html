@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="static/styles.css">
+    <title>Main</title>
+</head>
+<nav onload="setOnClickSearchCategory()" class="header">
+    <div class="logo-container">
+        <span class="material-icons menu-icon">menu</span>
+        <span class="logo">Logo</span>
+    </div>
+    <div class="search">
+        <div class="search-form">
+            <input type="text" onkeyup="debounce(search(),1000)" placeholder="Search by item name" class="search-input" size="60" id="search-input">
+            <div class="categories-container">
+                <button class="search-button" id="search-button">
+                    <span id="search-button-text">All Categories</span> <span class="material-icons">expand_more</span>
+                </button>
+                <div class="search-categories-dropdown" id="categories-container">
+                    <input class="dropdown-search-input" id="dropdown-search-input" type="text" onkeyup="searchCategories()" placeholder="Search">
+                    <a id="search-category">All Categories</a>
+                    <a id="search-category">Name</a>
+                    <a id="search-category">Description</a>
+                    <a id="search-category">Tags</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="profile-container">
+        <span class="material-icons">favorite</span>
+        <span class="material-icons">shopping_cart</span>
+        <div style="display: flex">
+            <button class="profile-button">Login</button>
+            <div class="vl"></div>
+            <button class="profile-button">Sign Up</button>
+        </div>
+    </div>
+</nav>
+
+<body>
+    <main class="main-white" id="main">
+        <div class="category-nav">
+            <div class="category-wrapper">
+                <div class="category-frame">
+
+                </div>
+                <div class="category-name">Category</div>
+            </div>
+
+            <div class="category-wrapper">
+                <div class="category-frame">
+
+                </div>
+                <div class="category-name">Category</div>
+            </div>
+
+            <div class="category-wrapper">
+                <div class="category-frame">
+
+                </div>
+                <div class="category-name">Category</div>
+            </div>
+
+            <div class="category-wrapper">
+                <div class="category-frame">
+
+                </div>
+                <div class="category-name">Category</div>
+            </div>
+
+            <div class="category-wrapper">
+                <div class="category-frame">
+
+                </div>
+                <div class="category-name">Category</div>
+            </div>
+
+            <div class="category-wrapper">
+                <div class="category-frame">
+
+                </div>
+                <div class="category-name">Category</div>
+            </div>
+
+            <div class="category-wrapper">
+                <div class="category-frame">
+
+                </div>
+                <div class="category-name">Category</div>
+            </div>
+
+
+        </div>
+        <div class="list-items" id="gifts-container">
+            <template id="coupon-template">
+                <div class="coupon" id="coupon-cl">
+                <div class="coupon-frame">
+
+                </div>
+                <div class="coupon-properties">
+                    <div class="coupon-property">
+                        <div class="coupon-item-one" id="name">
+                        </div>
+                        <span class="material-icons favorite-icon" id="favorite-icon">favorite</span>
+                        <div class="coupon-item-two" id="description">
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="coupon-price">
+                        <div style="display: flex; align-items: center">
+                            <div style="font-size: larger" id="price"></div><span class="material-icons">attach_money</span>
+                        </div>
+                        <button class="main-add-cart-button">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            </template>
+
+        </div>
+
+        <button onclick="scrollToTopFunction()" id="scrollToTopButton" class="scrollToTopButton material-icons">arrow_upward</button>
+    </main>
+</body>
+<footer class="footer">
+</footer>
+
+</html>
+
+<script src="js/main.js"></script>

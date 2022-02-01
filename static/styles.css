@@ -1,0 +1,703 @@
+body {
+    display: grid;
+    grid-template-areas: "header" "main" "footer";
+    grid-template-rows: 75px 1fr 60px;
+    margin: 0;
+    height: 100vh;
+}
+
+.search-button,
+.search-input {
+    font-family: "Roboto Light", sans-serif;
+    font-size: medium;
+    border-radius: unset;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    flex-grow: 8;
+}
+
+.logo {
+    font-family: "Roboto Light", sans-serif;
+    font-weight: bold;
+    font-size: large;
+}
+
+.menu-icon {
+    color: #c4c4c4;
+    font-size: 35px;
+}
+
+.search {
+    display: flex;
+    flex-grow: 8;
+}
+
+.search-form {
+    display: flex;
+}
+
+.search-input {
+    border-right-width: 0.4px;
+    padding-left: 15px;
+    height: auto;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.dropdown-search-input {
+    font-family: "Roboto Light", sans-serif;
+    font-size: medium;
+    border-right-width: 0px;
+    border: 1px;
+    border-style: none;
+    padding-left: 15px;
+    height: 32px;
+}
+
+.search-button {
+    border-left-width: 0.4px;
+    height: 42px;
+    align-items: center;
+    display: flex;
+    background: white;
+    padding-inline: 15px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.search-categories-dropdown {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.search-categories-dropdown a {
+    color: black;
+    font-family: "Roboto Light", sans-serif;
+    font-size: medium;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.categories-container a:hover {
+    background-color: #ddd;
+}
+
+.categories-container:hover .search-categories-dropdown {
+    display: block;
+}
+
+.categories-container:hover {
+    background-color: #f1f1f1;
+}
+
+.profile-container {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.profile-button {
+    border-style: none;
+    background: white;
+    font-family: "Roboto Light", sans-serif;
+    font-size: medium;
+}
+
+.vl {
+    display: flex;
+    align-self: center;
+    border-left: 2px solid black;
+    height: 16px;
+}
+
+.header {
+    grid-area: header;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-inline: 15px;
+    min-height: 75px;
+}
+
+.main {
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f2f2f2;
+}
+
+.main-white {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    background: white;
+}
+
+.main-details {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    background: #f2f2f2;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+
+/* login page */
+
+.login-form {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.login-container {
+    position: relative;
+    width: 496px;
+    height: 378px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: solid #c9c9c9 2px;
+    padding-bottom: 32px;
+    background: #fcfcfc;
+}
+
+.login-subframe-one {
+    display: flex;
+    justify-content: center;
+    flex-grow: 4;
+}
+
+.login-subframe-two {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.login-text {
+    display: flex;
+    font-family: "Roboto Light", sans-serif;
+    font-size: x-large;
+    color: #828282;
+}
+
+.login-button {
+    font-family: "Roboto Light", sans-serif;
+    font-weight: bold;
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 342px;
+    height: 46px;
+    color: #ffffff;
+    background-color: #6fcf97;
+    border-style: none;
+}
+
+.login-input {
+    font-family: "Roboto Light", sans-serif;
+    font-size: x-large;
+    text-align: center;
+    width: 342px;
+    height: 46px;
+    color: #828282;
+    padding: 0;
+}
+
+.circle {
+    width: 180px;
+    height: 180px;
+    background: #c4c4c4;
+    border-radius: 50%;
+    font-family: "Roboto Light", sans-serif;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: xxx-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -90px;
+}
+
+
+/* register page */
+
+.register-frame {
+    display: flex;
+    flex-direction: column;
+    width: 940px;
+    height: 470px;
+    font-family: "Roboto Light", sans-serif;
+    background: white;
+    color: #828282;
+}
+
+.register-frame-header {
+    font-family: "Roboto Light", sans-serif;
+    font-size: x-large;
+    padding: 22px;
+    color: white;
+    background: #bdbdbd;
+}
+
+.register-form {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 15px;
+    padding-inline: 42px;
+    padding-block: 22px;
+}
+
+.register-form-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.register-form-item label {
+    padding-bottom: 10px;
+}
+
+.register-form-item input {
+    height: 46px;
+}
+
+.register-form-button {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+    padding-top: 22px;
+}
+
+.register-form-button input {
+    font-family: "Roboto Light", sans-serif;
+    font-size: large;
+    font-weight: bold;
+    height: 46px;
+}
+
+#cancel {
+    border: 1px solid #bdbdbd;
+    background: white;
+    color: #828282;
+}
+
+#sign-up {
+    border-style: none;
+    color: #ffffff;
+    background-color: #6fcf97;
+}
+
+
+/* add new item page */
+
+.title-frame {
+    font-family: "Roboto Light", sans-serif;
+    font-size: x-large;
+    color: #ffffff;
+    background: #bdbdbd;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    padding-inline: 240px;
+}
+
+.add-form {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 100px;
+    grid-row-gap: 15px;
+    padding-left: 220px;
+    padding-right: 270px;
+    padding-block: 22px;
+}
+
+.add-form-item {
+    display: flex;
+    flex-direction: column;
+    font-family: "Roboto Light", sans-serif;
+    color: #828282;
+}
+
+.add-form-item label {
+    padding-bottom: 10px;
+}
+
+.add-form-item input {
+    height: 46px;
+    border: 1px solid #bdbdbd;
+    color: black;
+}
+
+.add-form-item textarea {
+    border: 1px solid #bdbdbd;
+}
+
+.add-form-item select {
+    height: 46px;
+    border: 1px solid #bdbdbd;
+}
+
+.add-form-group-item {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-gap: 10px;
+}
+
+.add-form-button {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 22px;
+    padding-top: 22px;
+}
+
+.add-form-button input {
+    font-family: "Roboto Light", sans-serif;
+    font-size: large;
+    font-weight: bold;
+    height: 46px;
+}
+
+#back {
+    border: 1px solid #bdbdbd;
+    background: white;
+    color: #828282;
+}
+
+#save {
+    border-style: none;
+    color: #ffffff;
+    background-color: #6fcf97;
+}
+
+.icon {
+    padding-top: 42px;
+    min-width: 40px;
+    padding-left: 295px;
+}
+
+ ::-webkit-input-placeholder {
+    /* Chrome */
+    color: black;
+}
+
+ :-ms-input-placeholder {
+    /* IE 10+ */
+    color: black;
+}
+
+ ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: black;
+    opacity: 1;
+}
+
+ :-moz-placeholder {
+    /* Firefox 4 - 18 */
+    color: black;
+    opacity: 1;
+}
+
+
+/* main page */
+
+.category-nav {
+    height: 116px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #e0e0e0;
+}
+
+.category-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.category-frame {
+    height: 62px;
+    width: 62px;
+    background: white;
+    margin-bottom: 8px;
+}
+
+.category-name {
+    font-family: "Roboto Light", sans-serif;
+}
+
+.list-items {
+    background: #f2f2f2;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 236px);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1rem;
+    padding-top: 30px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.coupon {
+    display: flex;
+    width: 300px;
+    flex-direction: column;
+}
+
+.coupon-frame {
+    height: 300px;
+    background: #e0e0e0;
+}
+
+.coupon-properties {
+    background: white;
+}
+
+.coupon-properties div {
+    font-family: "Roboto Light", sans-serif;
+}
+
+.coupon-properties hr {
+    color: #f2f2f2;
+}
+
+.coupon-property {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.coupon-item-two,
+.coupon-item-one {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+.coupon-item-one {
+    display: inline-block;
+    max-width: 75%;
+    font-size: large;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    padding-top: 10px;
+}
+
+.coupon-item-two {
+    font-size: small;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    padding-top: 10px;
+}
+
+.coupon-item-two span {
+    color: #999999;
+}
+
+.favorite-icon {
+    color: #757575;
+    display: inline-block;
+    align-self: flex-end;
+}
+
+.coupon-price {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 10px;
+    padding-bottom: 10px;
+}
+
+.main-add-cart-button {
+    border: 1px solid #bdbdbd;
+    background: white;
+    font-size: medium;
+    padding-inline: 20px;
+    padding-block: 5px;
+}
+
+
+/* details page */
+
+.coupon-image {
+    grid-area: image;
+    height: 370px;
+    background: #e0e0e0;
+}
+
+.details-coupon-property {
+    grid-area: property;
+    background: white;
+    padding-left: 24px;
+    font-family: "Roboto Light", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-inline: 24px;
+}
+
+.details-coupon-property h2 {
+    margin-top: 0;
+}
+
+.details-coupon-property p {
+    color: #4f4f4f;
+}
+
+.item-description {
+    font-family: "Roboto Light", sans-serif;
+    grid-area: description;
+}
+
+.item-description h2 {
+    font-weight: normal;
+}
+
+.item-description p {
+    color: #4f4f4f;
+}
+
+.grid-container {
+    display: grid;
+    padding-inline: 60px;
+    padding-top: 40px;
+    grid-column-gap: 60px;
+    grid-row-gap: 30px;
+    grid-template-areas: "image image image property" "description description description description";
+}
+
+.coupon-price {
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-cart-button {
+    color: #20a7f4;
+    background: white;
+    border: 0;
+    font-size: medium;
+}
+
+.add-cart-button span {
+    color: #757575;
+}
+
+
+/* checkout page */
+
+.checkout-title {
+    display: flex;
+    font-family: "Roboto Light", sans-serif;
+    font-size: x-large;
+    color: white;
+    height: 70px;
+    background: #bdbdbd;
+    align-items: center;
+    padding-left: 254px;
+    font-weight: bold;
+}
+
+.coupon-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-inline: 254px;
+    padding-top: 60px;
+}
+
+.coupon-wrapper hr {
+    color: #a7a7a7;
+    width: calc(100vw - 508px);
+}
+
+.coupon-item {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 40px;
+    font-family: "Roboto Light", sans-serif;
+    margin-bottom: 24px;
+}
+
+.checkout-coupon-image {
+    height: 110px;
+    width: 110px;
+    background: #e0e0e0;
+}
+
+.coupon-description h2 {
+    color: #4f4f4f;
+    margin-top: 8px;
+}
+
+.coupon-description p {
+    color: #9c9c9c;
+}
+
+#back {
+    border: 1px solid #bdbdbd;
+    background: white;
+    color: #828282;
+}
+
+#checkout {
+    border-style: none;
+    color: #ffffff;
+    background-color: #6fcf97;
+}
+
+.add-form-button {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 22px;
+    padding-top: 22px;
+}
+
+.add-form-button input {
+    font-family: "Roboto Light", sans-serif;
+    font-size: large;
+    font-weight: bold;
+    height: 46px;
+}
+
+.total-price {
+    font-family: "Roboto Light", sans-serif;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.total-price h2 {
+    font-weight: normal;
+    padding-right: 60px;
+}
+
+.scrollToTopButton {
+    display: none;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 30px;
+    right: 20px;
+    border-radius: 50%;
+}
